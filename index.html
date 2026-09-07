@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spot — find the reference you saved months ago</title>
+<meta name="description" content="Spot is a Mac app for designers: save thousands of references, get the right one back the moment a project needs it. Lives in the notch. Your files stay on your Mac.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#F7F7F5;--panel:#fff;--ink:#1A1A1A;--ink2:#6B6B66;--ink3:#9A9A94;--line:#E6E6E2;--field:#EFEFEC}
+@media(prefers-color-scheme:dark){:root{--bg:#141414;--panel:#1B1B1B;--ink:#ECECEA;--ink2:#9C9C97;--ink3:#6E6E69;--line:#2A2A2A;--field:#232323}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+header{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;font-size:20px;letter-spacing:-.02em;text-decoration:none}
+.brand span{color:var(--ink3)}
+nav a{font-size:14px;color:var(--ink2);text-decoration:none;margin-left:22px}
+nav a:hover{color:var(--ink)}
+.hero{padding:96px 0 56px}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.03em;margin:0 0 22px;font-weight:700;max-width:14ch}
+.lead{font-size:clamp(18px,2.4vw,22px);color:var(--ink2);max-width:40ch;margin:0 0 36px}
+.dl{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:16px}
+.btn:hover{opacity:.88}
+.btn.alt{background:var(--field);color:var(--ink);font-weight:500}
+.btn svg{width:18px;height:18px}
+.fine{font-size:13px;color:var(--ink3);margin-top:14px}
+.fine a{color:var(--ink2)}
+.notch{margin:56px 0 0;border-radius:18px;background:#000;color:#fff;padding:0 0 22px;position:relative;overflow:hidden}
+.notch .bar{height:33px;display:flex;justify-content:center}
+.notch .cut{width:200px;height:33px;background:#000;border-radius:0 0 14px 14px;position:relative}
+.notch .cut::before,.notch .cut::after{content:"";position:absolute;top:0;width:16px;height:16px;background:#000}
+.notch .pill{margin:8px auto 0;width:min(272px,80%);height:30px;border-radius:999px;background:#1C1C1C;box-shadow:inset 0 0 0 1px #2A2A2A;display:flex;align-items:center;padding:0 12px;font-size:13px;color:#7A7A7A}
+.notch .arc{display:flex;justify-content:center;gap:6px;margin-top:18px;padding:0 20px}
+.notch .arc i{display:block;width:44px;height:44px;border-radius:6px;background:#2a2a2a;transform:translateY(var(--y))}
+.notch .arc i:nth-child(1){--y:0}.notch .arc i:nth-child(2){--y:10px}.notch .arc i:nth-child(3){--y:17px}.notch .arc i:nth-child(4){--y:21px}.notch .arc i:nth-child(5){--y:22px}.notch .arc i:nth-child(6){--y:21px}.notch .arc i:nth-child(7){--y:17px}.notch .arc i:nth-child(8){--y:10px}.notch .arc i:nth-child(9){--y:0}
+.notch .cap{position:absolute;right:16px;bottom:12px;font:11px ui-monospace,Menlo,monospace;color:#8A8A8A}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:0 0 26px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.grid h3{font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
+.grid p{margin:0;color:var(--ink2)}
+.steps{counter-reset:s;display:grid;gap:14px;max-width:60ch}
+.steps div{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.steps div::before{counter-increment:s;content:counter(s);width:26px;height:26px;border-radius:50%;background:var(--field);display:grid;place-items:center;font-size:13px;font-weight:600}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--ink2)}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);font-size:13px;color:var(--ink3);display:flex;gap:22px;flex-wrap:wrap}
+footer a{color:var(--ink2);text-decoration:none}
+code{font:13px ui-monospace,Menlo,monospace;background:var(--field);padding:1px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/">Sp<span>o</span>t</a>
+    <nav><a href="#how">How it works</a><a href="#install">Install</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>The reference you saved months ago, back when the project needs it.</h1>
+    <p class="lead">Spot lives in your Mac's notch. Type what you need; an arc of your own saved pictures appears. Everything stays in a folder on your Mac.</p>
+    <div class="dl" id="download">
+      <a class="btn" id="dl-main" href="https://github.com/spotappjason/spot-releases/releases/latest/download/Spot-arm64.pkg" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+        Download for Mac
+      </a>
+      <a class="btn alt" id="dl-alt" href="https://github.com/spotappjason/spot-releases/releases/latest/download/Spot-x64.pkg" download>Intel Mac</a>
+    </div>
+    <p class="fine" id="dl-fine">Apple silicon (M1 and later) · macOS 13 or newer · installer, about 110 MB · <a href="https://github.com/spotappjason/spot-releases/releases/latest/download/Spot-arm64.dmg">prefer a .dmg?</a></p>
+
+    <div class="notch" aria-hidden="true">
+      <div class="bar"><div class="cut"></div></div>
+      <div class="pill">Spot it</div>
+      <div class="arc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="cap">hover the notch · type · pick</div>
+    </div>
+  </div>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div><h3>Save without stopping</h3><p>Take a screenshot, or drag a picture or a link onto the notch. One sentence about what it is and why. That sentence is what finds it later.</p></div>
+      <div><h3>Ask in your own words</h3><p>"shoes", "walnut lamp", "that grainy Berlin poster". Spot ranks everything you own and never hides a result; widen the net when you want more.</p></div>
+      <div><h3>Your AI, your account</h3><p>Optionally connect Claude or ChatGPT with a key from your own account. It widens searches and describes pictures for you. Spot never sees or bills those calls.</p></div>
+      <div><h3>Nothing leaves your Mac</h3><p>Your references are files in a folder you choose. Spot reads them; it does not upload them. Sign-in is only so updates and, later, plans can find you.</p></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>Install</h2>
+    <div class="steps">
+      <div><b>Download and open the installer.</b><span>It walks you through Continue → Install. Spot lands in Applications.</span></div>
+      <div><b>If macOS says it can't check the developer.</b><span>Spot isn't signed with Apple yet. Open <b>System Settings → Privacy &amp; Security</b>, scroll down, press <b>Open Anyway</b>, then open Spot again. Older macOS: right-click the installer → Open.</span></div>
+      <div><b>Sign in with Google.</b><span>A browser tab opens; pick your account; come back. Spot is in early access, so if Google says "Access blocked", email the address you want to use and it will be enabled.</span></div>
+      <div><b>Hover the notch.</b><span>That's the whole app.</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Spot</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:contentforjason@gmail.com">Contact</a>
+  </footer>
+</div>
+<script>
+// Apple-silicon Macs report "MacIntel" too; the download buttons already default to Apple silicon with an Intel alternative.
+// If the browser exposes the architecture (Chromium's client hints), swap the primary button.
+(async () => {
+  try {
+    if (!navigator.userAgentData || !navigator.userAgentData.getHighEntropyValues) return;
+    const v = await navigator.userAgentData.getHighEntropyValues(['architecture']);
+    if (v.architecture === 'x86') {
+      document.getElementById('dl-main').href = 'https://github.com/spotappjason/spot-releases/releases/latest/download/Spot-x64.pkg';
+      document.getElementById('dl-alt').href = 'https://github.com/spotappjason/spot-releases/releases/latest/download/Spot-arm64.pkg';
+      document.getElementById('dl-alt').textContent = 'Apple silicon Mac';
+      document.getElementById('dl-fine').firstChild.textContent = 'Intel · macOS 13 or newer · installer, about 115 MB · ';
+    }
+  } catch {}
+})();
+</script>
+</body>
+</html>
