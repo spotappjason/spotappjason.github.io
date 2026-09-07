@@ -46,8 +46,9 @@ h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3
 .steps{counter-reset:s;display:grid;gap:14px;max-width:60ch}
 .steps div{display:grid;grid-template-columns:32px 1fr;column-gap:12px;align-items:start}
 .steps div::before{counter-increment:s;content:counter(s);grid-column:1;grid-row:1 / span 2;width:26px;height:26px;border-radius:50%;background:var(--field);display:grid;place-items:center;font-size:13px;font-weight:600}
-.steps b{grid-column:2;display:block;font-weight:600}
+.steps > div > b{grid-column:2;display:block;font-weight:600}
 .steps span{grid-column:2;color:var(--ink2)}
+.steps span b{font-weight:600;color:var(--ink)}
 footer{padding:36px 0 60px;border-top:1px solid var(--line);font-size:13px;color:var(--ink3);display:flex;gap:22px;flex-wrap:wrap}
 footer a{color:var(--ink2);text-decoration:none}
 code{font:13px ui-monospace,Menlo,monospace;background:var(--field);padding:1px 6px;border-radius:4px}
@@ -95,7 +96,7 @@ code{font:13px ui-monospace,Menlo,monospace;background:var(--field);padding:1px 
     <div class="steps">
       <div><b>Download and open the installer.</b><span>It walks you through Continue → Install. Spot lands in Applications.</span></div>
       <div><b>If macOS says it can't check the developer.</b><span>Spot isn't signed with Apple yet. Open <b>System Settings → Privacy &amp; Security</b>, scroll down, press <b>Open Anyway</b>, then open Spot again. Older macOS: right-click the installer → Open.</span></div>
-      <div><b>Sign in with Google.</b><span>A browser tab opens; pick your account; come back. Spot is in early access, so if Google says "Access blocked", email the address you want to use and it will be enabled.</span></div>
+      <div><b>Sign in with Google.</b><span>A browser tab opens; pick any Google account; come back. That account is your identity for updates; your references never leave your Mac.</span></div>
       <div><b>Hover the notch.</b><span>That's the whole app.</span></div>
     </div>
   </section>
