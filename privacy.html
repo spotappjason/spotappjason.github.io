@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spot (Privacy)</title>
+<meta name="description" content="What Spot stores, where, and why. Your references never leave your Mac; the website sets no cookies.">
 <style>
 @font-face{font-family:"Helvetica Web";font-weight:400;src:url("fonts/Helvetica.woff") format("woff")}
 @font-face{font-family:"Swiss 721 Web";font-weight:700;src:url("fonts/Swiss721-W26-Bold.woff") format("woff")}
@@ -9,25 +10,80 @@ html{background:var(--paper)}body{margin:0;background:var(--paper);color:var(--i
 .mark{font:700 20px/1 "Swiss 721 Web","Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-block;margin-bottom:64px}
 h1{font:400 16px/24px inherit;margin:0 0 2px;color:var(--black)}.date{color:var(--grey);font-size:12px;margin-bottom:34px}
 h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0 0 10px}ul{padding-left:18px;margin:0 0 10px}b{font-weight:400;color:var(--black)}
+.toc{color:var(--grey);font-size:12px;margin:0 0 24px;padding:0;list-style:none}.toc li{margin:0 0 2px}.toc a{text-decoration:none}
+@media(max-width:900px){.page{padding:20px 20px 60px}}
 </style></head><body><div class="page"><a class="mark" href="/">Spot</a>
-<h1>Privacy policy</h1><div class="date">Effective 7 September 2026</div>
-<p>Spot is a Mac application made by Jason Hong. This policy says what Spot stores, where, and why. The short version: <b>your references never leave your computer</b>; the only personal data Spot keeps online is what is needed to sign you in.</p>
-<h2>What stays on your Mac</h2>
-<ul><li><b>Your references.</b> Pictures, links and the notes you write about them are files in a folder on your computer that you choose. Spot reads and organises that folder. It does not upload it, copy it, or send it anywhere.</li>
-<li><b>Your AI keys.</b> If you connect Claude (Anthropic) or ChatGPT (OpenAI), the API key you paste is encrypted with the macOS keychain and stored only on your Mac. It is sent only to the provider you chose, only when you use an AI feature. Spot's servers never receive it.</li>
-<li><b>Settings.</b> Preferences and the sign-in session are stored on your Mac.</li></ul>
-<h2>What is stored online</h2>
-<ul><li><b>Your account.</b> Signing in with Google gives Spot your Google account's email address, name and profile picture, and creates a login session. This is stored by Supabase, the authentication service Spot uses, in the United States. It is used to identify you across updates and, in the future, to attach a plan to your account. Nothing about your references is stored there.</li></ul>
-<h2>Third parties Spot talks to</h2>
-<ul><li><b>Google</b>, to sign you in. Google's privacy policy applies to the sign-in step.</li>
-<li><b>Supabase</b>, which stores the account record above.</li>
-<li><b>Anthropic or OpenAI</b>, only if you connect a key, only for the pictures and search words you send them through Spot. Their policies apply to those requests.</li>
-<li><b>GitHub</b>, which hosts Spot's downloads. Spot checks it for new versions; that request carries no personal data.</li></ul>
-<p>Spot contains no analytics, no advertising and no trackers.</p>
-<h2>Deleting your data</h2>
-<p>Sign out to end the session and delete the app to remove everything stored on your Mac; your references folder is yours and stays where it is. To delete your account record, email <a href="mailto:contentforjason@gmail.com">contentforjason@gmail.com</a> from the address you signed in with and it will be removed within 30 days.</p>
-<h2>Changes</h2>
-<p>If this policy changes, the date above changes and the new version is published at this address.</p>
-<h2>Contact</h2>
-<p><a href="mailto:contentforjason@gmail.com">contentforjason@gmail.com</a></p>
+<h1>Privacy policy</h1><div class="date">Last updated 14 September 2026 · effective from that date · replaces the policy of 7 September 2026</div>
+
+<p>Spot is a Mac application and this website, made and run by Jason Hong, an individual developer. This policy says what Spot stores, where, and why, in plain words. The short version: <b>your references never leave your computer</b>; the only personal data kept online is what is needed to sign you in; <b>this website sets no cookies</b>.</p>
+
+<ul class="toc">
+<li><a href="#a1">1 · What this covers</a></li><li><a href="#a2">2 · What stays on your Mac</a></li><li><a href="#a3">3 · What is stored online</a></li><li><a href="#a4">4 · Who else receives data</a></li><li><a href="#a5">5 · Search by meaning (not yet available)</a></li><li><a href="#a6">6 · This website</a></li><li><a href="#cookies">7 · Cookies and similar technologies</a></li><li><a href="#a8">8 · Why we may process data, and for how long</a></li><li><a href="#a9">9 · Your rights and how to delete everything</a></li><li><a href="#a10">10 · Security</a></li><li><a href="#a11">11 · Children</a></li><li><a href="#a12">12 · Changes and contact</a></li>
+</ul>
+
+<h2 id="a1">Article 1 · What this covers</h2>
+<p>This policy covers the Spot application for macOS and the website at spotappjason.github.io, including its download, pricing, changelog, privacy and terms pages. It does not cover Google, Supabase, GitHub, Anthropic, OpenAI or any other service you reach through Spot; their own policies apply to them, and they are named below.</p>
+
+<h2 id="a2">Article 2 · What stays on your Mac</h2>
+<ul>
+<li><b>Your references.</b> The pictures, links and the sentences you write about them are files in a folder on your computer that you choose. Spot reads and organises that folder. It does not upload, copy or send it anywhere.</li>
+<li><b>Your AI keys.</b> If you connect Claude (Anthropic) or ChatGPT (OpenAI), the key you paste is encrypted with the macOS keychain and stored only on your Mac. It is sent only to the provider you chose, only when you use an AI feature. Spot's servers never receive it.</li>
+<li><b>Settings, the sign-in session and the search index.</b> Stored in Spot's own folder under Application Support on your Mac. This includes, once search by meaning exists, the numeric vectors described in Article 5. Deleting the app's folder removes all of it.</li>
+<li><b>Deleted screenshots.</b> When you delete a screenshot from Spot, it is moved to the macOS Trash, where you can recover it. Spot never deletes a file outright.</li>
+</ul>
+
+<h2 id="a3">Article 3 · What is stored online</h2>
+<ul>
+<li><b>Your account.</b> Signing in with Google gives Spot your Google account's email address, name and profile picture, and creates a login session. Supabase, the authentication service Spot uses, stores this in the United States. It is used to identify you across updates and, in the future, to attach a plan to your account and to count metered use. Nothing about your references is stored there.</li>
+<li><b>Nothing else.</b> Spot keeps no copy of your files, your sentences, your searches or your AI keys online.</li>
+</ul>
+
+<h2 id="a4">Article 4 · Who else receives data</h2>
+<ul>
+<li><b>Google</b>, to sign you in. Google's privacy policy applies to the sign-in step.</li>
+<li><b>Supabase</b>, which stores the account record in Article 3.</li>
+<li><b>Anthropic or OpenAI</b>, only if you connect a key, and only the pictures and search words you send them through Spot, on your own account. Their policies apply to those requests.</li>
+<li><b>GitHub</b>, which hosts Spot's downloads and this website. The app checks GitHub for a new version every six hours; that request carries no personal data beyond what any web request carries (your IP address and app version).</li>
+<li><b>Cloudflare</b>, once search by meaning exists (Article 5), as the host of Spot's proxy.</li>
+</ul>
+<p>Spot sells no data, shares none for advertising, and contains no analytics, advertising or trackers.</p>
+
+<h2 id="a5">Article 5 · Search by meaning (not yet available)</h2>
+<p>A future version of Spot will let you search by meaning rather than by exact words. When you turn it on, the sentences you wrote about your references — and, only if you choose it, your pictures — are sent to Spot's server to be turned into numbers, and the numbers come back to your Mac, where they are stored. The server keeps a count of requests per account, for the plan limits, and nothing else: no sentences, no pictures, no numbers. This feature is off until you turn it on, and this policy and the changelog will say so before it becomes available.</p>
+
+<h2 id="a6">Article 6 · This website</h2>
+<p>The website is a set of static pages hosted by GitHub Pages. GitHub may log requests to it (IP address, browser, pages fetched) for security and operation under GitHub's privacy statement. When you open the download page, your browser asks GitHub's public API for the newest version number so the page can show it; that request goes to GitHub, not to Spot, and carries nothing from this site. The fonts are served from this site itself. There are no analytics, no advertising, no embedded social widgets and no third-party scripts.</p>
+
+<h2 id="cookies">Article 7 · Cookies and similar technologies</h2>
+<p><b>This website sets no cookies of its own</b>, uses no local storage in your browser, and uses no tracking pixels or fingerprinting. Because nothing is stored in your browser by this site, there is no cookie banner: there is nothing to consent to.</p>
+<ul>
+<li>GitHub, as the host, may set cookies of its own when you visit github.com pages such as the downloads page; GitHub's privacy statement governs those.</li>
+<li>The Spot application stores its settings in a file on your Mac (Article 2), not in cookies.</li>
+<li>If this site ever starts using cookies or similar technologies, this article will be rewritten first and the page will show a notice before any are set.</li>
+</ul>
+
+<h2 id="a8">Article 8 · Why we may process data, and for how long</h2>
+<ul>
+<li><b>To run the service you asked for</b> (signing you in, checking for updates, attaching a plan to your account): the account data in Article 3, kept for as long as you have an account.</li>
+<li><b>Because you chose it</b> (connecting an AI, turning on search by meaning): only what those features need, only while they are on; you can withdraw at any time by disconnecting or turning the feature off.</li>
+<li><b>To keep the service safe</b> (rate limits, abuse prevention): request counts per account, kept for at most 48 hours; hosting logs are kept by GitHub and Cloudflare under their own policies.</li>
+</ul>
+<p>For people in the European Economic Area or the United Kingdom, those three are the legal bases: performance of a contract, consent, and legitimate interest respectively. Data stored by Supabase and GitHub is held in the United States under their standard contractual clauses.</p>
+
+<h2 id="a9">Article 9 · Your rights and how to delete everything</h2>
+<ul>
+<li><b>Your references</b> are already yours: plain files in your folder. Nothing to request; take them anywhere.</li>
+<li><b>On your Mac:</b> sign out to end the session; delete the app and its folder under Application Support to remove settings, keys and the search index.</li>
+<li><b>Your account record:</b> email <a href="mailto:contentforjason@gmail.com">contentforjason@gmail.com</a> from the address you signed in with and it will be deleted within 30 days, together with any plan and request counts.</li>
+<li>You can also ask what is held about you, have it corrected, or receive a copy, at the same address. Wherever the law gives you further rights (for example under the GDPR or the California Consumer Privacy Act), you have them, and you may complain to your local data-protection authority.</li>
+</ul>
+
+<h2 id="a10">Article 10 · Security</h2>
+<p>Keys and the sign-in session are sealed with the macOS keychain; every connection Spot makes uses HTTPS; Spot's own AI key, when search by meaning exists, lives only on Spot's server and never in the app. Spot is early-access software and no system is perfectly secure; if a breach ever affects your account data, you will be told by email without undue delay.</p>
+
+<h2 id="a11">Article 11 · Children</h2>
+<p>Spot is not directed at children under 16 and does not knowingly collect data from them. If you believe a child has created an account, write to the address below and it will be removed.</p>
+
+<h2 id="a12">Article 12 · Changes and contact</h2>
+<p>If this policy changes, the date at the top changes, the change is listed in the <a href="changelog.html">changelog</a>, and the new version is published at this address. Questions, requests and complaints: <a href="mailto:contentforjason@gmail.com">contentforjason@gmail.com</a>.</p>
 </div></body></html>
