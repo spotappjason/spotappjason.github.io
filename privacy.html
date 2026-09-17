@@ -13,12 +13,12 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 .toc{color:var(--grey);font-size:12px;margin:0 0 24px;padding:0;list-style:none}.toc li{margin:0 0 2px}.toc a{text-decoration:none}
 @media(max-width:900px){.page{padding:20px 20px 60px}}
 </style></head><body><div class="page"><a class="mark" href="/">Spot</a>
-<h1>Privacy policy</h1><div class="date">Last updated 14 September 2026 · effective from that date · replaces the policy of 7 September 2026</div>
+<h1>Privacy policy</h1><div class="date">Last updated 17 September 2026 · effective from that date · replaces the policy of 14 September 2026</div>
 
-<p>Spot is a Mac application and this website, made and run by Jason Hong, an individual developer. This policy says what Spot stores, where, and why, in plain words. The short version: <b>your references never leave your computer</b>; the only personal data kept online is what is needed to sign you in; <b>this website sets no cookies</b>.</p>
+<p>Spot is a Mac application and this website, made and run by Jason Hong, an individual developer. This policy says what Spot stores, where, and why, in plain words. The short version: <b>your references never leave your computer</b> — unless you turn on search by meaning, which sends only the sentences you wrote (Article 5); the only personal data kept online is what is needed to sign you in; <b>this website sets no cookies</b>.</p>
 
 <ul class="toc">
-<li><a href="#a1">1 · What this covers</a></li><li><a href="#a2">2 · What stays on your Mac</a></li><li><a href="#a3">3 · What is stored online</a></li><li><a href="#a4">4 · Who else receives data</a></li><li><a href="#a5">5 · Search by meaning (not yet available)</a></li><li><a href="#a6">6 · This website</a></li><li><a href="#cookies">7 · Cookies and similar technologies</a></li><li><a href="#a8">8 · Why we may process data, and for how long</a></li><li><a href="#a9">9 · Your rights and how to delete everything</a></li><li><a href="#a10">10 · Security</a></li><li><a href="#a11">11 · Children</a></li><li><a href="#a12">12 · Changes and contact</a></li>
+<li><a href="#a1">1 · What this covers</a></li><li><a href="#a2">2 · What stays on your Mac</a></li><li><a href="#a3">3 · What is stored online</a></li><li><a href="#a4">4 · Who else receives data</a></li><li><a href="#a5">5 · Search by meaning</a></li><li><a href="#a6">6 · This website</a></li><li><a href="#cookies">7 · Cookies and similar technologies</a></li><li><a href="#a8">8 · Why we may process data, and for how long</a></li><li><a href="#a9">9 · Your rights and how to delete everything</a></li><li><a href="#a10">10 · Security</a></li><li><a href="#a11">11 · Children</a></li><li><a href="#a12">12 · Changes and contact</a></li>
 </ul>
 
 <h2 id="a1">Article 1 · What this covers</h2>
@@ -28,7 +28,7 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 <ul>
 <li><b>Your references.</b> The pictures, links and the sentences you write about them are files in a folder on your computer that you choose. Spot reads and organises that folder. It does not upload, copy or send it anywhere.</li>
 <li><b>Your AI keys.</b> If you connect Claude (Anthropic) or ChatGPT (OpenAI), the key you paste is encrypted with the macOS keychain and stored only on your Mac. It is sent only to the provider you chose, only when you use an AI feature. Spot's servers never receive it.</li>
-<li><b>Settings, the sign-in session and the search index.</b> Stored in Spot's own folder under Application Support on your Mac. This includes, once search by meaning exists, the numeric vectors described in Article 5. Deleting the app's folder removes all of it.</li>
+<li><b>Settings, the sign-in session and the search index.</b> Stored in Spot's own folder under Application Support on your Mac. This includes, if you turn on search by meaning, the numeric vectors described in Article 5. Deleting the app's folder removes all of it.</li>
 <li><b>Deleted screenshots.</b> When you delete a screenshot from Spot, it is moved to the macOS Trash, where you can recover it. Spot never deletes a file outright.</li>
 </ul>
 
@@ -44,12 +44,13 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 <li><b>Supabase</b>, which stores the account record in Article 3.</li>
 <li><b>Anthropic or OpenAI</b>, only if you connect a key, and only the pictures and search words you send them through Spot, on your own account. Their policies apply to those requests.</li>
 <li><b>GitHub</b>, which hosts Spot's downloads and this website. The app checks GitHub for a new version every six hours; that request carries no personal data beyond what any web request carries (your IP address and app version).</li>
-<li><b>Cloudflare</b>, once search by meaning exists (Article 5), as the host of Spot's proxy.</li>
+<li><b>Cloudflare</b>, only if you turn on search by meaning (Article 5), as the host of Spot's proxy.</li>
+<li><b>Voyage AI</b>, only if you turn on search by meaning (Article 5): it receives the sentences and search words to turn into numbers, and nothing about your account.</li>
 </ul>
 <p>Spot sells no data, shares none for advertising, and contains no analytics, advertising or trackers.</p>
 
-<h2 id="a5">Article 5 · Search by meaning (not yet available)</h2>
-<p>A future version of Spot will let you search by meaning rather than by exact words. When you turn it on, the sentences you wrote about your references — and, only if you choose it, your pictures — are sent to Spot's server to be turned into numbers, and the numbers come back to your Mac, where they are stored. The server keeps a count of requests per account, for the plan limits, and nothing else: no sentences, no pictures, no numbers. This feature is off until you turn it on, and this policy and the changelog will say so before it becomes available.</p>
+<h2 id="a5">Article 5 · Search by meaning</h2>
+<p>Since version 0.7.11 Spot can search by meaning rather than by exact words. It is off until you turn it on: in the app, Account → Search by meaning → <b>Index now</b>. When you do, the sentences you wrote about your references — never your pictures, unless a later version asks you separately — are sent to Spot's server, a Cloudflare Worker run by us, which passes them to Voyage AI to be turned into numbers. The numbers come back to your Mac, where they are stored, and every later search sends the words you type the same way. The server keeps a count of requests per account, for the plan limits, and nothing else: no sentences, no numbers. Voyage AI's policy applies to the request it receives; it is not given your account. Deleting the app's data on your Mac removes the numbers.</p>
 
 <h2 id="a6">Article 6 · This website</h2>
 <p>The website is a set of static pages hosted by GitHub Pages. GitHub may log requests to it (IP address, browser, pages fetched) for security and operation under GitHub's privacy statement. When you open the download page, your browser asks GitHub's public API for the newest version number so the page can show it; that request goes to GitHub, not to Spot, and carries nothing from this site. The fonts are served from this site itself. There are no analytics, no advertising, no embedded social widgets and no third-party scripts.</p>
