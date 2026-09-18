@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SPOT</title>
-<meta name="description" content="Spot is a Mac app that lives in the notch. Type what you need; an arc of your own saved references appears. Everything stays in a folder on your Mac.">
+<meta name="description" content="Spot is a Mac app that lives in the notch. Type what you need; an arc of your own saved references appears. Your reference files stay in a folder on your Mac; optional AI processing sends images or text to providers.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23000'/%3E%3C/svg%3E">
 <style>
 @font-face{font-family:"Helvetica Web";font-weight:400;font-style:normal;src:url("fonts/Helvetica.woff") format("woff")}
@@ -75,13 +75,13 @@ footer span{color:var(--grey)}
   <header class="top">
     <div class="l"><a class="pill" href="#product">Download</a><a class="pill" href="pricing.html">Pricing</a></div>
     <div class="mark">Spot</div>
-    <div class="r"><a class="pill" id="ver" href="changelog.html" title="What changed in every version">0.7.8</a></div>
+    <div class="r"><a class="pill" id="ver" href="changelog.html" title="What changed in every version">0.7.10</a></div>
   </header>
 
   <section class="home">
     <h1 class="bigmark">Spot</h1>
     <a class="arrow" href="#product"><span>Download</span></a>
-    <ul class="index" aria-label="Things people find with Spot">
+    <ul class="index" aria-label="Example reference searches">
       <li>shoes</li>
       <li>walnut lamp</li>
       <li>that grainy Berlin poster</li>
@@ -95,9 +95,9 @@ footer span{color:var(--grey)}
       <li>the label with the embossed dot</li>
       <li>keycaps, dye-sub, warm grey</li>
       <li>the tutorial about git</li>
-      <li>everything I saved in June</li>
+      <li>linen shade, walnut base</li>
     </ul>
-    <p class="tail">What people type into the notch. Spot ranks everything you ever saved and hides nothing.</p>
+    <p class="tail">Examples of what to search for. Spot ranks matching references from their tags and notes; results depend on what is in your collection.</p>
   </section>
 
   <section class="product" id="product">
@@ -108,19 +108,19 @@ footer span{color:var(--grey)}
     </div>
     <div class="stage"><img id="stage" src="img/spot-capture.png" alt="Spot's popup hanging from the Mac notch: a note field, a link, and an arc of saved pictures below it"></div>
     <div class="details">
-      <h1 id="title">Spot (0.7.8)</h1>
+      <h1 id="title">Spot (0.7.10)</h1>
       <p class="var">Mac</p>
       <p class="price">Free</p>
-      <p class="tax">Early access. Files stay on your Mac.</p>
+      <p class="tax">Early access. Reference files stay in your folder.</p>
       <ul class="spec">
         <li>Lives in the notch</li>
         <li>Hover, type, pick from an arc of your own references</li>
         <li>Drag a picture or a link onto the notch to save it</li>
         <li>One sentence per reference is what finds it later</li>
-        <li>Ranks everything, hides nothing</li>
+        <li>Ranked matches with reasons and three result levels</li>
         <li>Your own Claude or ChatGPT key, optional</li>
         <li>Plain files in a folder you choose</li>
-        <li>Google sign-in, updates every six hours</li>
+        <li>Google sign-in; checks for updates while running</li>
         <li>macOS 13 or newer</li>
       </ul>
       <p class="opt">Chip: <span id="chip-name">Apple silicon</span></p>
@@ -137,7 +137,7 @@ footer span{color:var(--grey)}
           <li>Sign in with Google in the tab that opens, then come back.</li>
           <li>Hover the notch.</li>
         </ol></div></details></li>
-        <li><details><summary>Privacy</summary><div class="body">Your references never leave your Mac. Sign-in stores your Google email, name and picture with Supabase; an AI key you paste is encrypted on your Mac and sent only to Anthropic or OpenAI. No analytics. This website sets no cookies. <a href="privacy.html" style="text-decoration:underline">Full policy</a> · <a href="privacy.html#cookies" style="text-decoration:underline">Cookies</a>.</div></details></li>
+        <li><details><summary>Privacy</summary><div class="body">Your reference files stay on your Mac. AI Describe sends pictures and context to your chosen provider; configured text meaning features send reference text and queries through Spot’s proxy to Voyage AI. Keys use operating-system encryption when available, with an unencrypted fallback. Supabase stores your account; the proxy stores usage counts and eligibility flags. No analytics. This website sets no cookies. <a href="privacy.html" style="text-decoration:underline">Full policy</a> · <a href="privacy.html#cookies" style="text-decoration:underline">Cookies</a>.</div></details></li>
         <li><details><summary>Changelog</summary><div class="body">Every version and what changed in it, from the same log the app ships from. <a href="changelog.html" style="text-decoration:underline">All versions</a>.</div></details></li>
         <li><details><summary>Terms</summary><div class="body">Early-access software, provided as is. Everything you save is yours. <a href="terms.html" style="text-decoration:underline">Full terms</a>.</div></details></li>
       </ul>
