@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spot (Privacy)</title>
-<meta name="description" content="What Spot stores, where, and why. Your references never leave your Mac; the website sets no cookies.">
+<meta name="description" content="What Spot stores, where, and why. Files stay locally owned; AI features send images or text to providers. The website sets no cookies.">
 <style>
 @font-face{font-family:"Helvetica Web";font-weight:400;src:url("fonts/Helvetica.woff") format("woff")}
 @font-face{font-family:"Swiss 721 Web";font-weight:700;src:url("fonts/Swiss721-W26-Bold.woff") format("woff")}
@@ -15,41 +15,47 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 </style></head><body><div class="page"><a class="mark" href="/">Spot</a>
 <h1>Privacy policy</h1><div class="date">Last updated 14 September 2026 · effective from that date · replaces the policy of 7 September 2026</div>
 
-<p>Spot is a Mac application and this website, made and run by Jason Hong, an individual developer. This policy says what Spot stores, where, and why, in plain words. The short version: <b>your references never leave your computer</b>; the only personal data kept online is what is needed to sign you in; <b>this website sets no cookies</b>.</p>
+<p>Spot is a Mac application and this website, made and run by Jason Hong, an individual developer. This policy says what Spot stores, where, and why, in plain words. The short version: <b>your reference files remain on your computer</b>; AI features send images or text for processing as described below. Account information, usage counts and Pro eligibility may be stored online; <b>this website sets no cookies</b>.</p>
 
 <ul class="toc">
-<li><a href="#a1">1 · What this covers</a></li><li><a href="#a2">2 · What stays on your Mac</a></li><li><a href="#a3">3 · What is stored online</a></li><li><a href="#a4">4 · Who else receives data</a></li><li><a href="#a5">5 · Search by meaning (not yet available)</a></li><li><a href="#a6">6 · This website</a></li><li><a href="#cookies">7 · Cookies and similar technologies</a></li><li><a href="#a8">8 · Why we may process data, and for how long</a></li><li><a href="#a9">9 · Your rights and how to delete everything</a></li><li><a href="#a10">10 · Security</a></li><li><a href="#a11">11 · Children</a></li><li><a href="#a12">12 · Changes and contact</a></li>
+<li><a href="#a1">1 · What this covers</a></li><li><a href="#a2">2 · What stays on your Mac</a></li><li><a href="#a3">3 · What is stored online</a></li><li><a href="#a4">4 · Who else receives data</a></li><li><a href="#a5">5 · Search by meaning</a></li><li><a href="#a6">6 · This website</a></li><li><a href="#cookies">7 · Cookies and similar technologies</a></li><li><a href="#a8">8 · Why we may process data, and for how long</a></li><li><a href="#a9">9 · Your rights and how to delete everything</a></li><li><a href="#a10">10 · Security</a></li><li><a href="#a11">11 · Children</a></li><li><a href="#a12">12 · Changes and contact</a></li>
 </ul>
 
 <h2 id="a1">Article 1 · What this covers</h2>
-<p>This policy covers the Spot application for macOS and the website at spotappjason.github.io, including its download, pricing, changelog, privacy and terms pages. It does not cover Google, Supabase, GitHub, Anthropic, OpenAI or any other service you reach through Spot; their own policies apply to them, and they are named below.</p>
+<p>This policy covers the Spot application for macOS and the website at spotappjason.github.io, including its download, pricing, changelog, privacy and terms pages. It does not cover Google, Supabase, GitHub, Cloudflare, Voyage AI, Anthropic, OpenAI or any other service you reach through Spot; their own policies apply to them, and they are named below.</p>
 
 <h2 id="a2">Article 2 · What stays on your Mac</h2>
 <ul>
-<li><b>Your references.</b> The pictures, links and the sentences you write about them are files in a folder on your computer that you choose. Spot reads and organises that folder. It does not upload, copy or send it anywhere.</li>
-<li><b>Your AI keys.</b> If you connect Claude (Anthropic) or ChatGPT (OpenAI), the key you paste is encrypted with the macOS keychain and stored only on your Mac. It is sent only to the provider you chose, only when you use an AI feature. Spot's servers never receive it.</li>
-<li><b>Settings, the sign-in session and the search index.</b> Stored in Spot's own folder under Application Support on your Mac. This includes, once search by meaning exists, the numeric vectors described in Article 5. Deleting the app's folder removes all of it.</li>
-<li><b>Deleted screenshots.</b> When you delete a screenshot from Spot, it is moved to the macOS Trash, where you can recover it. Spot never deletes a file outright.</li>
+<li><b>Your references.</b> The pictures, links and the sentences you write about them are files in a folder on your computer that you choose. Spot reads and organises that folder. Capture and import can copy or download pictures, and filing can move them. There is no cloud vault mirror in the current app. AI Describe sends pictures to a provider; text meaning features send reference text and queries as described in Articles 4 and 5.</li>
+<li><b>Your AI keys.</b> If you connect Claude (Anthropic) or ChatGPT (OpenAI), the key you paste is stored on your Mac. Spot uses operating-system encryption through Electron safeStorage when available; otherwise it uses base64 encoding, which is not encryption. The key is sent to your chosen provider to validate the connection and run AI features, not to Spot’s proxy.</li>
+<li><b>Settings, the sign-in session and the search index.</b> Stored in Spot's own folder under Application Support on your Mac. This includes numeric vectors and cached query vectors when you use the feature described in Article 5. Importer access tokens, such as Are.na or Raindrop tokens, are stored in local settings without safeStorage encryption. Deleting the app’s folder removes these local settings, credentials and indexes; it does not delete your online account.</li>
+<li><b>Deleted screenshots.</b> When you delete a screenshot from Spot, it is moved to the macOS Trash, where you can recover it. This screenshot-delete action uses the Trash rather than permanently removing the screenshot.</li>
 </ul>
 
 <h2 id="a3">Article 3 · What is stored online</h2>
 <ul>
-<li><b>Your account.</b> Signing in with Google gives Spot your Google account's email address, name and profile picture, and creates a login session. Supabase, the authentication service Spot uses, stores this in the United States. It is used to identify you across updates and, in the future, to attach a plan to your account and to count metered use. Nothing about your references is stored there.</li>
-<li><b>Nothing else.</b> Spot keeps no copy of your files, your sentences, your searches or your AI keys online.</li>
+<li><b>Your account.</b> Signing in with Google gives Spot your Google account's email address, name and profile picture, and creates a login session. Supabase, the authentication service Spot uses, stores this in the United States. It identifies your account and authenticates requests to Spot’s proxy. The current app does not store reference files in Supabase.</li>
+<li><b>Usage and eligibility.</b> Spot’s proxy stores account-linked daily embedding request counts, monthly describe counts when that route is used, and Pro eligibility flags. Retention is described in Article 8.</li>
+<li><b>Processing content.</b> The proxy application does not persist the reference text, images or vectors it forwards. Requests still pass through hosting and AI providers, whose logging and retention policies apply. This is different from storing a cloud copy of your vault.</li>
 </ul>
 
 <h2 id="a4">Article 4 · Who else receives data</h2>
 <ul>
 <li><b>Google</b>, to sign you in. Google's privacy policy applies to the sign-in step.</li>
 <li><b>Supabase</b>, which stores the account record in Article 3.</li>
-<li><b>Anthropic or OpenAI</b>, only if you connect a key, and only the pictures and search words you send them through Spot, on your own account. Their policies apply to those requests.</li>
+<li><b>Anthropic or OpenAI</b>, when you use your own connected key: AI Describe sends the picture and supporting description/tag context; AI widening sends the query and vocabulary. Connecting a key also contacts the provider to validate it. An optional Spot-funded Pro route can forward describe requests through Spot’s proxy to Anthropic, but that route is disabled in the current app configuration. The provider’s policies apply to requests it receives.</li>
 <li><b>GitHub</b>, which hosts Spot's downloads and this website. The app checks GitHub for a new version every six hours; that request carries no personal data beyond what any web request carries (your IP address and app version).</li>
-<li><b>Cloudflare</b>, once search by meaning exists (Article 5), as the host of Spot's proxy.</li>
+<li><b>Cloudflare</b>, which hosts Spot’s proxy for text meaning and the optional Pro describe route.</li>
+<li><b>Voyage AI</b>, which receives reference text and queries forwarded by Spot’s text meaning proxy (Article 5).</li>
+<li><b>Import sources and linked websites</b>, when you import references or ask Spot to fetch a link or picture. A connected source receives the token needed for that request.</li>
 </ul>
 <p>Spot sells no data, shares none for advertising, and contains no analytics, advertising or trackers.</p>
 
-<h2 id="a5">Article 5 · Search by meaning (not yet available)</h2>
-<p>A future version of Spot will let you search by meaning rather than by exact words. When you turn it on, the sentences you wrote about your references — and, only if you choose it, your pictures — are sent to Spot's server to be turned into numbers, and the numbers come back to your Mac, where they are stored. The server keeps a count of requests per account, for the plan limits, and nothing else: no sentences, no pictures, no numbers. This feature is off until you turn it on, and this policy and the changelog will say so before it becomes available.</p>
+<h2 id="a5">Article 5 · Search by meaning</h2>
+<p>The text meaning service is deployed, but availability depends on the app version, its proxy configuration and a successfully built local index. It is not enabled in every public release. In a configured copy, <b>Account → Search by meaning → Index now</b> starts indexing manually. The current app does not automatically embed each new save and has no separate meaning or picture consent switches.</p>
+<p>Indexing sends text assembled from a reference’s title, full note body, tags grouped by facet, folder names other than excluded source folders, and words read from the picture. Date, image dimensions, orientation and language metadata are kept locally beside the vectors rather than added to this text. The text goes through Spot’s Cloudflare proxy to <b>Voyage AI</b>, which returns numeric embeddings stored on your Mac.</p>
+<p>Once a configured copy has a populated index, searches can send query text through the same service. Cached query vectors can avoid a new request. The proxy checks your Supabase sign-in token and counts requests per account; the app and proxy both apply request limits. There is no separate on/off switch in the current implementation.</p>
+<p><b>This embedding path sends text, not pictures.</b> Image embeddings are not implemented. AI Describe is a separate feature that does send a picture to the chosen provider, as described in Article 4. Provider and hosting retention policies still apply; the proxy’s retained usage and eligibility records are described in Article 8.</p>
 
 <h2 id="a6">Article 6 · This website</h2>
 <p>The website is a set of static pages hosted by GitHub Pages. GitHub may log requests to it (IP address, browser, pages fetched) for security and operation under GitHub's privacy statement. When you open the download page, your browser asks GitHub's public API for the newest version number so the page can show it; that request goes to GitHub, not to Spot, and carries nothing from this site. The fonts are served from this site itself. There are no analytics, no advertising, no embedded social widgets and no third-party scripts.</p>
@@ -65,8 +71,8 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 <h2 id="a8">Article 8 · Why we may process data, and for how long</h2>
 <ul>
 <li><b>To run the service you asked for</b> (signing you in, checking for updates, attaching a plan to your account): the account data in Article 3, kept for as long as you have an account.</li>
-<li><b>Because you chose it</b> (connecting an AI, turning on search by meaning): only what those features need, only while they are on; you can withdraw at any time by disconnecting or turning the feature off.</li>
-<li><b>To keep the service safe</b> (rate limits, abuse prevention): request counts per account, kept for at most 48 hours; hosting logs are kept by GitHub and Cloudflare under their own policies.</li>
+<li><b>Because you chose it</b> (connecting an AI or starting meaning indexing): the content needed for those requests and, once an index is ready, meaning queries as described in Article 5. You can withdraw consent at any time. You can disconnect your AI key in Account. The current meaning implementation has no separate disable switch; contact the address below to withdraw consent or request help stopping processing and deleting related data.</li>
+<li><b>To keep the service safe</b> (rate limits, abuse prevention): daily embedding counts expire 48 hours after their last update; monthly describe counts expire 40 days after their last update. Pro eligibility flags have no automatic expiry in the proxy and remain until removed. Account and related-data deletion requests are covered by Article 9. Hosting logs are kept by GitHub and Cloudflare under their own policies; AI-provider retention is governed by the relevant provider’s policy.</li>
 </ul>
 <p>For people in the European Economic Area or the United Kingdom, those three are the legal bases: performance of a contract, consent, and legitimate interest respectively. Data stored by Supabase and GitHub is held in the United States under their standard contractual clauses.</p>
 
@@ -79,7 +85,7 @@ h2{font:400 14px/20px inherit;margin:28px 0 4px;color:var(--black)}p,li{margin:0
 </ul>
 
 <h2 id="a10">Article 10 · Security</h2>
-<p>Keys and the sign-in session are sealed with the macOS keychain; every connection Spot makes uses HTTPS; Spot's own AI key, when search by meaning exists, lives only on Spot's server and never in the app. Spot is early-access software and no system is perfectly secure; if a breach ever affects your account data, you will be told by email without undue delay.</p>
+<p>Keys and the sign-in session use operating-system encryption when safeStorage is available, with the unencrypted base64 fallback described in Article 2. Importer tokens are stored in local settings. The configured authentication and AI services use HTTPS; Google sign-in also returns through an HTTP loopback address on your own computer. Links you ask Spot to fetch may use their own protocols. Spot’s own provider keys belong on its server, not in the downloadable app. Spot is early-access software and no system is perfectly secure; if a breach ever affects your account data, you will be told by email without undue delay.</p>
 
 <h2 id="a11">Article 11 · Children</h2>
 <p>Spot is not directed at children under 16 and does not knowingly collect data from them. If you believe a child has created an account, write to the address below and it will be removed.</p>

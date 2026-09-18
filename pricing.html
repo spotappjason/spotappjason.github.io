@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Spot (Pricing)</title>
-<meta name="description" content="Spot is free for 40 pictures on your own AI key. Pro is $10 a month: unlimited pictures, moodboards, and 200 pictures a month described on Spot's key. Cloud adds 100 GB and search from anywhere for $10 more.">
+<meta name="description" content="Planned Spot pricing, not on sale yet: Free for 40 pictures, Pro at $10 a month with 200 Spot-funded describes, and Cloud with 100 GB for $10 more. The current app is free to download.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23000'/%3E%3C/svg%3E">
 <style>
 @font-face{font-family:"Helvetica Web";font-weight:400;font-style:normal;src:url("fonts/Helvetica.woff") format("woff")}
@@ -68,22 +68,22 @@ footer span{color:var(--grey)}
 
   <section class="head">
     <h1>Pricing</h1>
-    <p class="sub">Free for your first 40 pictures. Pro is $10 a month. Cloud adds 100 GB and search from anywhere.</p>
-    <p class="note">Not on sale yet. Search never counts against anything; the plans differ in how many pictures you keep and who pays for the AI.</p>
+    <p class="sub">Planned: Free for your first 40 pictures. Pro at $10 a month. Cloud adds 100 GB and search from anywhere.</p>
+    <p class="note">Not on sale yet. The current app is free to download; the 40-picture cap, paid plans and Cloud storage are not implemented. Meaning requests have operational limits.</p>
   </section>
 
   <section class="plans" aria-label="Plans">
     <div class="plan">
       <h2>Free (your own key)</h2>
-      <p class="var">What you download today</p>
+      <p class="var">Planned Free tier</p>
       <p class="price">$0</p>
       <p class="tax">Forever. No card.</p>
       <ul class="spec">
-        <li>40 pictures stored and searchable</li>
-        <li>Search: unlimited, always</li>
+        <li>Intended cap: 40 pictures stored and searchable</li>
+        <li>Local keyword search; meaning requests rate-limited</li>
         <li>Describe with your own Claude or ChatGPT key</li>
         <li>Plain files in a folder you choose</li>
-        <li>Google sign-in, updates every six hours</li>
+        <li>Google sign-in; checks for updates while running</li>
         <li>macOS 13 or newer</li>
       </ul>
       <a class="cta" href="index.html#product">Download for Mac</a>
@@ -98,9 +98,9 @@ footer span{color:var(--grey)}
       <ul class="spec">
         <li>Everything in Free</li>
         <li>Pictures: unlimited</li>
-        <li>Describes on Spot's key: 200 a month, or your own key without limit</li>
-        <li>Moodboards</li>
-        <li>iPhone: coming</li>
+        <li>Describes on Spot’s key: 200 a month; own-key use subject to your provider’s limits and charges</li>
+        <li>Shared moodboards planned after Cloud; local boards already available</li>
+        <li>iPhone: planned, not built</li>
       </ul>
       <a class="cta pale" href="mailto:contentforjason@gmail.com?subject=Spot%20Pro">Tell me when</a>
       <span class="alt">Not on sale yet</span>
@@ -123,10 +123,10 @@ footer span{color:var(--grey)}
   </section>
 
   <ul class="more">
-    <li><details><summary>What counts as a describe</summary><div class="body">One picture sent to the AI to write its sentence and tags. Searching, the arc, boards and imports without describing never count. On Free every describe runs on your own key; on Pro, Spot's key covers 200 a month and your own key covers the rest.</div></details></li>
-    <li><details><summary>What happens at 200</summary><div class="body">Search keeps working. Describing on Spot's key pauses until next month; paste your own Claude or ChatGPT key under Account and it continues without limit.</div></details></li>
-    <li><details><summary>How the 40 is counted</summary><div class="body">Pictures Spot has filed for you. The 41st asks for Pro; everything already stored stays searchable, and nothing in your folder is ever hidden.</div></details></li>
-    <li><details><summary>Not on sale yet</summary><div class="body">Pro and Cloud open when Spot's server can pay for the AI on your behalf. Until then everything is free. Cancelling keeps your files: they are plain files in your folder. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a>.</div></details></li>
+    <li><details><summary>What counts as a describe</summary><div class="body">One picture sent to the AI to write its sentence and tags. Search and imports without describing do not consume the describe allowance; meaning indexing and uncached queries have a separate request quota. The planned Pro allowance is 200 Spot-funded describes a month, with your own key used first when connected. The proxy route exists but is disabled in the current app configuration.</div></details></li>
+    <li><details><summary>What happens at 200</summary><div class="body">The planned Spot-funded describe allowance pauses at 200 until the next month. Your own Claude or ChatGPT API key can be used subject to that provider’s limits and charges. Local keyword search is separate; meaning requests have their own limits.</div></details></li>
+    <li><details><summary>How the 40 is counted</summary><div class="body">The proposed rule counts pictures Spot has filed, with the 41st asking for Pro and already stored pictures remaining searchable. This counting and upgrade flow is not implemented; 40 is the intended Free-plan cap, not a limit enforced by today’s download.</div></details></li>
+    <li><details><summary>Not on sale yet</summary><div class="body">Pro and Cloud are not available to purchase. Billing, plan enforcement and Cloud storage still need implementation. The app download is free; using your own API key may incur provider charges. Your files remain plain files in your folder, independent of a future subscription. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a>.</div></details></li>
   </ul>
 
   <footer><span>© 2026 SPOT</span><a href="index.html#product">Download</a><a href="changelog.html">Changelog</a><a href="privacy.html">Privacy</a><a href="privacy.html#cookies">Cookies</a><a href="terms.html">Terms</a><a href="mailto:contentforjason@gmail.com">Contact</a></footer>
