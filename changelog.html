@@ -16,8 +16,12 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--pi
 .intro{margin-bottom:8px}.intro a{text-decoration:underline;text-underline-offset:2px}
 @media(max-width:900px){.page{padding:20px 20px 60px}}
 </style></head><body><div class="page"><a class="mark" href="/">Spot</a>
-<h1>Changelog</h1><div class="date">Last updated 1 October 2026 · 26 versions · newest first</div>
+<h1>Changelog</h1><div class="date">Last updated 1 October 2026 · 27 versions · newest first</div>
 <p class="intro">Every version of Spot and what changed in it, from the same log the app ships from. Installed copies check for a new version every six hours; the newest is always at <a href="https://github.com/spotappjason/spot-releases/releases/latest">the downloads page</a>.</p>
+<h2 id="v0.8.3">0.8.3 — 1 October 2026</h2>
+<ul><li>Mac only (GitHub's build service is still unavailable).</li></ul>
+<h3>Changed</h3>
+<ul><li><b>Your AI names every picture you save.</b> Before, it only wrote the title when you pressed Save with the note empty; with a note typed, a drop kept a name like "dropped 4". Now Save asks your AI for a title either way and gives it your note as a hint. Your note is kept exactly as you typed it, and if the AI can't answer, the picture still saves. Needs your own AI connected under Account.</li><li><b>Search by meaning reads only what describes the picture.</b> Automatic names ("dropped 4", "Screenshot 2026-…", "IMG 4586") and bare links are no longer part of what Spot sends to make a picture's meaning vector, so pictures stop looking alike just because they were saved the same way. Spot re-makes every vector by itself after the update.</li></ul>
 <h2 id="v0.8.2">0.8.2 — 1 October 2026</h2>
 <ul><li>Mac only, like 0.8.0 (GitHub's build service is still unavailable).</li></ul>
 <h3>Fixed</h3>
