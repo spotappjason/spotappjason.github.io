@@ -16,12 +16,14 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--pi
 .intro{margin-bottom:8px}.intro a{text-decoration:underline;text-underline-offset:2px}
 @media(max-width:900px){.page{padding:20px 20px 60px}}
 </style></head><body><div class="page"><a class="mark" href="/">Spot</a>
-<h1>Changelog</h1><div class="date">Last updated 1 October 2026 · 25 versions · newest first</div>
+<h1>Changelog</h1><div class="date">Last updated 1 October 2026 · 26 versions · newest first</div>
 <p class="intro">Every version of Spot and what changed in it, from the same log the app ships from. Installed copies check for a new version every six hours; the newest is always at <a href="https://github.com/spotappjason/spot-releases/releases/latest">the downloads page</a>.</p>
-<h2 id="v0.8.1">0.8.1 — 1 October 2026</h2>
+<h2 id="v0.8.2">0.8.2 — 1 October 2026</h2>
 <ul><li>Mac only, like 0.8.0 (GitHub's build service is still unavailable).</li></ul>
 <h3>Fixed</h3>
-<ul><li><b>The search spot splits again when you type</b> (the "mitosis"). With macOS Reduce Motion turned on, the first letter made the spot jump straight to the search pill: no split into two dots, no sticky neck, and the dictation shape stood still. Spot's notch animation now plays whatever the Reduce Motion setting says, as intended. Other apps and the rest of macOS still follow your setting.</li></ul>
+<ul><li><b>The search spot splits again when you type</b> (the "mitosis"). With macOS Reduce Motion turned on, the first letter made the spot jump straight to the search pill: no split into two dots, no sticky neck, and the dictation shape stood still. Spot's notch animation now plays whatever the Reduce Motion setting says, as intended. Other apps and the rest of macOS still follow your setting. (Announced for 0.8.1, but that build was made before the fix was merged; this is the first release that contains it.)</li></ul>
+<h2 id="v0.8.1">0.8.1 — 1 October 2026</h2>
+<ul><li>Mac only. <b>Same app as 0.8.0 with a new version number.</b> It was meant to carry the mitosis fix, but it</li><li>was built and published from <code>fdfdee1</code> (0.8.0) before PR #21 merged; its published notes wrongly</li><li>claimed the fix. The fix ships in 0.8.2.</li></ul>
 <h2 id="v0.8.0">0.8.0 — 27 September 2026</h2>
 <ul><li>Renumbered from the planned 0.7.12 on 2026-09-24 (Jason's call: selected-text capture makes this a</li><li>feature release); older entries that say "0.7.12" mean this section. No public 0.7.11 or 0.7.12 exists.</li><li>Planned release grouping; no public 0.7.12 exists at the 2026-09-18 audit checkpoint. Changes below</li><li>span merged source and the audit branch; publish only after the reviewed branch is merged and the</li><li>release checks pass. The previous draft is archived in BEFORE-2026-09-18--CHANGELOG.</li><li><b>Mac only.</b> GitHub's build service could not run (account billing), so 0.8.0 is published for Mac</li><li>alone with <code>SPOT_MAC_ONLY=1 npm run release</code>. Windows installers are not part of it; they follow in a</li><li>later release once the Windows build and CI run again.</li></ul>
 <h3>Added</h3>
